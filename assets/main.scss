@@ -1,0 +1,60 @@
+---
+---
+// Import the default minima styles
+@import "minima";
+
+// Overrides for "The Editorial Reader" Vibe
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$heading-font-family: Georgia, serif;
+$background-color: #fcfcfb; // Warm, paper-like off-white
+$text-color: #333333; // Softer than pure black for readability
+$brand-color: #c94a38; // Terracotta / Burnt Orange accent
+
+// Apply the custom fonts and background
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  line-height: 1.6;
+}
+
+// Style all headings with the Serif font
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.post-title {
+  font-family: $heading-font-family;
+  color: #1a1a1a;
+  font-weight: normal;
+}
+
+// Style the links with the brand color
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($brand-color, 15%);
+    text-decoration: underline;
+  }
+}
+
+// Make the site title pop slightly
+.site-title {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #1a1a1a;
+  
+  &:hover {
+    text-decoration: none;
+    color: $brand-color;
+  }
+}
+
+// Improve blockquote styling for a more editorial feel
+blockquote {
+  color: #555;
+  border-left: 4px solid $brand-color;
+  padding-left: 15px;
+  font-style: italic;
+  font-family: $heading-font-family;
+}
